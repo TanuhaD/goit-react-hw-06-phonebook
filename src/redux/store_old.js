@@ -23,6 +23,7 @@ const rootReducer = combineReducers({
   contacts: contactsReducer,
   filters: filterReducer,
 });
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
@@ -34,5 +35,4 @@ export const store = configureStore({
       },
     }),
 });
-
 export const persistor = persistStore(store);
